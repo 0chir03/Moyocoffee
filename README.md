@@ -107,17 +107,16 @@ DB_PASSWORD=pass
   **Ответ**:
 
 - **Статус:** `201 OK`
-
   ```json
 {
-"user": {
-"name": "ricardo",
-"email": "kaka@mail.ru",
-"updated_at": "2025-01-09T18:34:08.000000Z",
-"created_at": "2025-01-09T18:34:08.000000Z",
-"id": 6
-},
-"token": "30|xwJrFVSWnQl2KpNmzQpZSOPr1kURawfNWsaXetW873c15062"
+    "user": {
+    "name": "ricardo",
+    "email": "kaka@mail.ru",
+    "updated_at": "2025-01-09T18:34:08.000000Z",
+    "created_at": "2025-01-09T18:34:08.000000Z",
+    "id": 6
+    },
+    "token": "30|xwJrFVSWnQl2KpNmzQpZSOPr1kURawfNWsaXetW873c15062"
 }
   ```
 
