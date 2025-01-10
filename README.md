@@ -39,18 +39,18 @@
 2. Клонируйте репозиторий:
 
    ```bash
-   git clone git@github.com:Adlerprogr/TestMicroCRM.git
+   git clone git@github.com:0chir03/Moyocoffee.git
    ```
 
 3. Настройте файл `.env`:
 
    ```bash
-DB_CONNECTION=pgsql
-DB_HOST=db
-DB_PORT=5432
-DB_DATABASE=postgresdb
-DB_USERNAME=user
-DB_PASSWORD=pass
+    DB_CONNECTION=pgsql
+    DB_HOST=db
+    DB_PORT=5432
+    DB_DATABASE=postgresdb
+    DB_USERNAME=user
+    DB_PASSWORD=pass
    ```
 
 4. Запустите сервер:
@@ -92,66 +92,29 @@ DB_PASSWORD=pass
     chmod 777 storage/app/public/avatars
     ```
 
-10. После запуска сервера вы можете работать с API через такие сервисы как Postman.
+10. После запуска сервера вы можете работать с API через браузер.
 
 Автор: [Oshir]
 # 
 
-## Эндпоинты
+## Маршруты
 
 
 ### 1. регистрация нового пользователя
 
-- **POST** `http://localhost:8082/api/register`
-
-  **Ответ**:
-
-- **Статус:** `201 OK`
-  ```json
-{
-    "user": {
-    "name": "ricardo",
-    "email": "kaka@mail.ru",
-    "updated_at": "2025-01-09T18:34:08.000000Z",
-    "created_at": "2025-01-09T18:34:08.000000Z",
-    "id": 6
-    },
-    "token": "30|xwJrFVSWnQl2KpNmzQpZSOPr1kURawfNWsaXetW873c15062"
-}
   ```
-
-  **Коды состояния**:
-    - 201 Created. A new resource was created successfully.
+  http://localhost:8082/register
+  ```
 
 ### 2. аутентификация пользователя
 
-- **POST** `http://localhost:8082/api/login`
-
-  **Ответ**:
-
-- **Статус:** `200 OK`
-  ```json
- {
-    "user": {
-        "id": 6,
-        "name": "ricardo",
-        "email": "kaka@mail.ru",
-        "avatar": null,
-        "created_at": "2025-01-09T18:34:08.000000Z",
-        "updated_at": "2025-01-09T18:34:08.000000Z"
-    },
-    "token": "31|u0PPjRwZCH7Y7CinQh85VdSoWRjIv2NDO5OS2fCC2c5b2f75"
-}
+  ```
+  http://localhost:8082/login
   ```
 
-**Коды состояния**:
-- `200 OK' Request successful. The server has responded as required.
 
 ### 3. Загрузка изображения и сохранение в локальном хранилище
 
-- **POST** `http://localhost:8082/api/avatar`
-
-  **Ответ**:
-
-- **Статус:** `200 OK`
-  ```json
+  ```
+  http://localhost:8082/avatar
+  ```
