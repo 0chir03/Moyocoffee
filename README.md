@@ -59,40 +59,26 @@
    docker-compose up --build
    ```
 
-5. Установитe необходимые пакеты:
-
-   ```bash
-   composer require laravel/sanctum
-   composer require intervention/image
-   ```
-
-6. Из контейнера php-fpm включите маршрутизацию API :
-
-   ```bash
-   docker-compose exec -it php-fpm bash 
-   php artisan install:api 
-   ```
-
-7. Из контейнера php-fpm запустите миграции:
+5. Из контейнера php-fpm запустите миграции:
 
    ```bash
    php artisan migrate
    ```
 
-8. Из контейнера php-fpm cоздайте символическую ссылку для public storage:
+6. Из контейнера php-fpm cоздайте символическую ссылку для public storage:
 
    ```bash
    php artisan storage:link
    ```
 
-9. Создайте директорию и выставите права по необходимости:
+7. Создайте директорию и выставите права по необходимости:
 
     ```bash
     mkdir -p storage/app/public/avatars
     chmod 777 storage/app/public/avatars
     ```
-
-10. После запуска сервера вы можете работать с API через браузер.
+   
+8. После запуска сервера можете пользоваться приложением по маршрутам, которые указаны ниже
 
 Автор: [Oshir]
 # 
